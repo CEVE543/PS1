@@ -1,0 +1,110 @@
+---
+title: "PS0"
+subtitle: "Preparation Self-Assessment"
+author: CEVE 543 Fall 2025
+due_date: "2025-09-03"
+assigned_date: "2025-08-16"
+
+engine: julia
+
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-block-bg: "#f8f8f8"
+    code-block-border-left: "#e1e4e5"
+    theme: default
+    number-sections: true
+    fig-format: svg
+  typst:
+    fontsize: 11pt
+    margin: 
+      x: 1in
+      y: 1in
+    number-sections: true
+    fig-format: svg
+
+execute: 
+  cache: true
+  freeze: auto
+
+# Code formatting options
+code-overflow: wrap
+code-line-numbers: false
+code-block-font-size: "0.85em"
+---
+
+This is an **ungraded** self-assessment designed to help you gauge your readiness for the course. 
+The goal is not to test you, but to give you a clear picture of the prerequisite knowledge we'll be building on.
+
+You should be able to understand and tackle the questions in this assignment.
+If you find you're rusty on something and need to check your notes or online resources, that's OK.
+If you find the majority of these questions unfamiliar or challenging, please reach out to me so we can discuss the best path forward for you.
+
+Solutions will be posted to Canvas.
+
+## Matrix Multiplication
+
+Let $\mathbf{A}$ be a $2 \times 3$ matrix and $\mathbf{B}$ be a $3 \times 4$ matrix.
+
+1. What is the dimension of the product $\mathbf{C} = \mathbf{A}\mathbf{B}$?
+2. If $C_{ij}$ is the element in the *i*-th row and *j*-th column of $\mathbf{C}$, write a formula for $C_{ij}$ in terms of the elements of $\mathbf{A}$ and $\mathbf{B}$.
+
+## System of Equations
+
+Consider the following system of linear equations:
+
+$$
+\begin{aligned}
+3x + 2y &= 7 \\
+x - 4y &= -1
+\end{aligned}
+$$
+
+1. Represent this system in the form $Mx = b$, identifying the matrix $M$ and the vectors $x$ and $b$.
+2. Solve for the vector $x$.
+
+## PDF and CDF
+
+Let $X$ be a continuous random variable representing daily rainfall in inches.
+Its probability density function (PDF) is given by $f(x) = 2(1-x)$ for $0 \le x \le 1$, and $f(x) = 0$ otherwise.
+What is the probability of observing more than 0.5 inches of rain on a given day?
+
+## Regression
+
+City planners in Houston are developing a model to predict daily water demand during the summer.
+They use linear regression to model `Demand` (in millions of gallons per day) based on the `AvgTemp` (average daily temperature in °C) and `Rainfall` (total daily rainfall in mm).
+The fitted model is:
+$$
+\text{Demand} = 120 + 10 \cdot \text{AvgTemp} - 8 \cdot \text{Rainfall}
+$$
+
+1. Interpret the meaning of the coefficient for `AvgTemp` (10) in the context of this model.
+1. Interpret the meaning of the coefficient for `Rainfall` (-8). Explain why the negative sign makes physical sense.
+1. Planners in New Orleans want to fit a similar model. They have collected data on demand, average temperature, and rainfall. Explain how you would estimate the coefficients.
+
+## Sea-Level Rise
+
+:::{.callout-tip}
+## Credit
+
+Based on part of an assignment by [Vivek Srikrishnan](https://envdata-sp24.viveks.me/assignments/hw02/hw02#problem-1) at Cornell
+:::
+
+Consider the following sea-level rise model:
+$$
+\begin{aligned}
+\frac{dS}{dt} &= \frac{S_\text{eq} - S}{\tau}\\
+S_\text{eq} &= aT + b
+\end{aligned}
+$$
+where $S(t)$ is the global mean sea level (in mm) at time $t$, $\tau$ is the response time of the sea level (in years), $S_\text{eq}$ is the equilibrium sea-level (in mm) at temperature $T$ (in °C), $a$ is the sensitivity of sea-level rise to temperature (in mm/°C), and $b$ is the equilibrium sea level (in mm) when $T = 0^\circ \text{C}$.
+
+Describe, using code or a paragraph, how you would write a function to simulate the global mean sea level $S(t)$ over a given period.
+Assume your function will receive the following inputs: an initial sea level, $S_0$, a time series of annual temperatures, $T(t)$, and model parameters $a$, $b$, and $\tau$.
+You will need to select a time step, $\Delta t$, for your simulation.
+You may use $\Delta t = 1 \text{year}$.
+
+## Programming
+
+Solve Project Euler [Problem 1](https://projecteuler.net/problem=1): "If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000."
