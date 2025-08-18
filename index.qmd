@@ -1,6 +1,6 @@
 ---
 title: "PS1"
-subtitle: "Extreme Value Theory"
+subtitle: "Nonstationary Daily Rainfall Analysis for Houston"
 author: CEVE 543 Fall 2025
 due_date: "2025-10-01"
 assigned_date: "2025-08-27"
@@ -33,3 +33,12 @@ code-overflow: wrap
 code-line-numbers: false
 code-block-font-size: "0.85em"
 ---
+
+## Tasks
+
+1. Fit stationary GEV model to Houston Hobby station data using MLE and Bayesian approaches
+2. Assess nonstationarity evidence using rolling window analysis and Mann-Kendall test; repeat for 5 nearby stations to identify spatial patterns
+3. Compare station-level analyses to identify which locations show strongest trends and evaluate consistency across the region
+4. Fit nonstationary GEV model with time-varying location parameter; choose and defend covariate selection (year vs. temperature indices)
+5. Implement regional partial pooling across all stations using hierarchical Bayesian model to improve parameter estimates
+6. Address stakeholder concerns: In 2 paragraphs, explain how you would respond to a senior engineer who is skeptical about using climate-informed design values instead of stationary historical analysis
