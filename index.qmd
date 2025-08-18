@@ -1,9 +1,13 @@
 ---
-title: "PS1"
-subtitle: "Nonstationary Daily Rainfall Analysis for Houston"
+title: "PS1: Nonstationary Rainfall Frequency Analysis (Due Oct 6)"
+subtitle: "Houston Daily Rainfall Extremes and Climate Change"
 author: CEVE 543 Fall 2025
-due_date: "2025-10-01"
-assigned_date: "2025-08-27"
+due_date: "2025-10-06"
+date: "2025-08-25"
+type: "assignment"
+module: 1
+points: "10%"
+description: "Comprehensive analysis of nonstationary rainfall extremes using EVT, Bayesian methods, and hierarchical modeling"
 
 engine: julia
 
@@ -13,7 +17,7 @@ format:
     toc-depth: 2
     code-block-bg: "#f8f8f8"
     code-block-border-left: "#e1e4e5"
-    theme: default
+    theme: cosmo
     number-sections: true
     fig-format: svg
   typst:
