@@ -17,7 +17,7 @@ format:
     toc-depth: 2
     code-block-bg: "#f8f8f8"
     code-block-border-left: "#e1e4e5"
-    theme: cosmo
+    theme: simplex
     number-sections: true
     fig-format: svg
   typst:
