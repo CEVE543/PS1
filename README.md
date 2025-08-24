@@ -33,6 +33,16 @@ This problem set develops skills in extreme value theory, Bayesian statistics, a
 - Model non-stationary extremes with covariate approaches
 - Select between competing models using formal criteria
 
+## Module Alignment
+
+This problem set directly supports Module 1 learning objectives by providing comprehensive practice with:
+
+- EVT parameter estimation using both frequentist (MLE) and Bayesian approaches
+- Nonstationarity detection and modeling with time-varying parameters
+- Hierarchical modeling for regional information sharing
+- Model comparison and selection techniques
+- Professional communication of technical uncertainty concepts
+
 ---
 
 This is a problem set for [CEVE 543 at Rice University](https://ceve543.github.io/), taught by James Doss-Gollin.
