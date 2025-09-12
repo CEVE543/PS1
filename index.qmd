@@ -45,6 +45,18 @@ The difficulty level reflects this substantial time commitment.
 
 - Daily precipitation data for Houston-area stations 
 - Boilerplate Quarto template with data loading and basic plotting functions
+- `util.jl` file from the labs is available for use
+- Code from previous labs for analysis
+
+### Julia Package Installation
+
+You will need to install Julia packages for this assignment. To do this:
+
+1. Open the Julia REPL
+2. Type `]` to enter package mode  
+3. Install packages with `add PackageName` (e.g., `add GeoMakie CSV DataFrames Turing`)
+
+**Note:** The packages listed above are examples. Check the lab files to see which specific packages you need for your analysis. If you try to run code that uses a package you haven't installed, you'll get an error like `ArgumentError: Package PackageName not found in current path`.
 
 ## Tasks
 

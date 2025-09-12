@@ -10,10 +10,24 @@ How likely is a part of Houston to experience different daily rainfall amounts, 
 
 This problem set develops skills in extreme value theory, Bayesian statistics, and hierarchical modeling through analysis of Houston-area precipitation data. Students will investigate changing flood risks and their implications for infrastructure design using state-of-the-art statistical methods.
 
+## Setup
+
+### Julia Package Installation
+
+You will need to install Julia packages for this assignment. To do this:
+
+1. Open the Julia REPL
+2. Type `]` to enter package mode
+3. Install packages with `add PackageName` (e.g., `add GeoMakie CSV DataFrames Turing`)
+
+**Note:** The packages listed above are examples. Check the lab files to see which specific packages you need for your analysis. If you try to run code that uses a package you haven't installed, you'll get an error like `ArgumentError: Package PackageName not found in current path`.
+
 ## Provided Materials
 
 - Daily precipitation data for 5-6 Houston-area stations (1970-2023)
 - Boilerplate Quarto template with data loading and basic plotting functions
+- `util.jl` file from the labs is available for use
+- Code from previous labs for analysis
 
 ## Tasks
 
@@ -24,24 +38,6 @@ This problem set develops skills in extreme value theory, Bayesian statistics, a
 5. **Hierarchical Pooling**: Implement regional partial pooling to improve parameter estimates
 6. **Stakeholder Communication**: Address engineering concerns about climate-informed design values
 
-## Learning Objectives
-
-- Apply extreme value theory fundamentals (AMS vs POT approaches)
-- Implement Maximum Likelihood Estimation and understand its limitations
-- Use Bayesian statistics and MCMC methods for uncertainty quantification
-- Apply regional pooling through hierarchical models to address data scarcity
-- Model non-stationary extremes with covariate approaches
-- Select between competing models using formal criteria
-
-## Module Alignment
-
-This problem set directly supports Module 1 learning objectives by providing comprehensive practice with:
-
-- EVT parameter estimation using both frequentist (MLE) and Bayesian approaches
-- Nonstationarity detection and modeling with time-varying parameters
-- Hierarchical modeling for regional information sharing
-- Model comparison and selection techniques
-- Professional communication of technical uncertainty concepts
 
 ---
 
