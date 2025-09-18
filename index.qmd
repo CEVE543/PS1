@@ -1,8 +1,8 @@
 ---
-title: "PS1: Nonstationary Rainfall Frequency Analysis (Due Oct 6)"
+title: "PS1: Nonstationary Rainfall Frequency Analysis (Due Oct 3)"
 subtitle: "Houston Daily Rainfall Extremes and Climate Change"
 author: CEVE 543 Fall 2025
-due_date: "2025-10-06"
+due_date: "2025-10-03"
 date: "2025-08-27"
 type: "assignment"
 module: 1
@@ -60,22 +60,23 @@ You will need to install Julia packages for this assignment. To do this:
 
 ## Tasks
 
-1. Stationary GEV Analysis (ready after Lab 3 - Fri 9/12)
-   - Select one Houston-area station for primary analysis throughout tasks 1-2, 4
+1. Stationary GEV Analysis (ready after Lab 4)
+   - Select one Houston-area station for primary analysis throughout tasks 1, 3, 4
    - Extract annual maximum daily precipitation from station data (provided)
    - Implement MLE using Turing.jl with `optimize(model, MAP())` workflow; benchmark results against `Extremes.jl` for validation
    - Implement Bayesian GEV inference using MCMC with `Turing.jl`; specify and justify physically-informed priors for location, scale, and shape parameters based on Houston climate knowledge
    - Compare posterior distributions to MLE results and ensure convergence
    - Calculate and plot 50-year and 100-year return period estimates with posterior uncertainty bounds
 
-2. Nonstationarity Detection (ready after Lab 4 - Fri 9/19)
-   - Using a 20-year rolling window analysis, plot the estimated 100-year return level over time
-   - Conduct Mann-Kendall trend test on annual maxima; report test statistic, p-value, and interpretation
-
-3. Multi-station Regional Analysis (ready after Lab 4 - Fri 9/19)
-   - Repeat Tasks 1-2 for 4 additional Houston-area stations using identical methods
-   - Create summary table comparing trend test p-values and 50-year return level changes
+2. Multi-station Regional Analysis (ready after Lab 4)
+   - Repeat Task 1 for 4 additional Houston-area stations using identical methods
+   - Create summary table comparing 50-year return level estimates across stations
    - Plot time series of all 5 stations on same axes to visualize synchronous behavior
+
+3. Nonstationarity Detection (ready after nonstationarity lecture - Mon 9/22)
+   - Using a 20-year rolling window analysis, plot the estimated 100-year return level over time for your primary station
+   - Conduct Mann-Kendall trend test on annual maxima; report test statistic, p-value, and interpretation
+   - Repeat nonstationarity analysis for all 5 stations and create summary table comparing trend test p-values
 
 4. Nonstationary GEV Modeling (ready after nonstationarity lecture - Mon 9/22)
    - Fit GEV model with time-varying location parameter: $\mu(t) = \mu_0 + \beta \cdot t$ for your selected station
@@ -85,7 +86,7 @@ You will need to install Julia packages for this assignment. To do this:
    - Generate return level plots showing how 50-year event changes over time under best model
    - Quantify change in 50-year return level from 1970 to 2023 with 90% credible intervals
 
-5. Hierarchical Bayesian Regional Pooling (ready after Lab 5 - Fri 9/26)
+5. Hierarchical Bayesian Regional Pooling (ready after Lab 5)
    - Implement partial pooling hierarchical model with station-level parameters drawn from regional hyperpriors
    - Compare posterior uncertainty in 50-year return levels: station-specific vs pooled estimates
    - Show shrinkage effects for one station with short record
