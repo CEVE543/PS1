@@ -9,7 +9,7 @@ module: 1
 points: "10%"
 description: "Comprehensive analysis of nonstationary rainfall extremes using EVT, Bayesian methods, and hierarchical modeling"
 
-engine: julia
+#engine: julia
 
 format:
   html:
@@ -27,10 +27,6 @@ format:
       y: 1in
     number-sections: true
     fig-format: svg
-
-execute: 
-  cache: true
-  freeze: auto
 
 # Code formatting options
 code-overflow: wrap
@@ -60,7 +56,7 @@ You will need to install Julia packages for this assignment. To do this:
 
 ## Tasks
 
-1. Stationary GEV Analysis (ready after Lab 4)
+1. Stationary GEV Analysis (ready after Lab 3)
    - Select one Houston-area station for primary analysis throughout tasks 1, 3, 4
    - Extract annual maximum daily precipitation from station data (provided)
    - Implement MLE using Turing.jl with `optimize(model, MAP())` workflow; benchmark results against `Extremes.jl` for validation
@@ -73,26 +69,21 @@ You will need to install Julia packages for this assignment. To do this:
    - Create summary table comparing 50-year return level estimates across stations
    - Plot time series of all 5 stations on same axes to visualize synchronous behavior
 
-3. Nonstationarity Detection (ready after nonstationarity lecture - Mon 9/22)
-   - Using a 20-year rolling window analysis, plot the estimated 100-year return level over time for your primary station
+3. Nonstationarity Analysis (ready after Lab 5)
    - Conduct Mann-Kendall trend test on annual maxima; report test statistic, p-value, and interpretation
    - Repeat nonstationarity analysis for all 5 stations and create summary table comparing trend test p-values
+   - Fit at least two nonstationary GEV models for your selected station
+   - Justify your choice of covariate(s) and which parameters vary with the covariate(s)
+   - Generate return level plots showing how extreme events change over time under your models
 
-4. Nonstationary GEV Modeling (ready after nonstationarity lecture - Mon 9/22)
-   - Fit GEV model with time-varying location parameter: $\mu(t) = \mu_0 + \beta \cdot t$ for your selected station
-   - Compare covariate options: (a) year, (b) temperature index for location parameter only
-   - Compare models using multiple criteria: AIC/BIC, posterior predictive performance, parameter interpretability, and robustness to outliers
-   - Which model would you trust most for infrastructure design and why? Consider trade-offs between model complexity and trustworthiness
-   - Generate return level plots showing how 50-year event changes over time under best model
-   - Quantify change in 50-year return level from 1970 to 2023 with 90% credible intervals
+4. Regional Parameter Estimation (ready after Lab 5)
+   - Choose and justify your regional model specification: which nonstationary GEV parameters should vary by station vs shared regionally
+   - Define and justify your choice of regional boundaries/stations to include based on geographic proximity, climate similarity, or other criteria
+   - Implement your chosen regional model where some parameters are shared across stations while others remain station-specific
+   - Compare posterior uncertainty in 50-year return levels: single-station vs regional estimates for stations with different data lengths
 
-5. Hierarchical Bayesian Regional Pooling (ready after Lab 5)
-   - Implement partial pooling hierarchical model with station-level parameters drawn from regional hyperpriors
-   - Compare posterior uncertainty in 50-year return levels: station-specific vs pooled estimates
-   - Show shrinkage effects for one station with short record
-
-6. Communication (can be drafted throughout)
+5. Communication (can be drafted throughout)
    - Write exactly 2 paragraphs (150-200 words each) responding to this scenario: "A senior infrastructure engineer argues that 50 years of local data provides sufficient information for design and that climate models add unnecessary complexity and uncertainty."
-   - Paragraph 1: Address uncertainty quantification - explain how Bayesian methods and regional pooling actually reduce parameter uncertainty compared to single-station MLE
+   - Paragraph 1: Address uncertainty quantification - explain how Bayesian methods and regional parameter sharing actually reduce parameter uncertainty compared to single-station MLE
    - Paragraph 2: Address model selection and risk - discuss evidence for nonstationarity and practical implications of underestimating future extreme events for infrastructure design
    - Reference specific results from your model comparison, prior specification, and uncertainty analysis to make concrete technical arguments
