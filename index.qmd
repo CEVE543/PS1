@@ -59,13 +59,13 @@ You will need to install Julia packages for this assignment. To do this:
 1. Stationary GEV Analysis (ready after Lab 3)
    - Select one Houston-area station for primary analysis throughout tasks 1, 3, 4
    - Extract annual maximum daily precipitation from station data (provided)
-   - Implement MLE using Turing.jl with `optimize(model, MAP())` workflow; benchmark results against `Extremes.jl` for validation
-   - Implement Bayesian GEV inference using MCMC with `Turing.jl`; specify and justify physically-informed priors for location, scale, and shape parameters based on Houston climate knowledge
-   - Compare posterior distributions to MLE results and ensure convergence
-   - Calculate and plot 50-year and 100-year return period estimates with posterior uncertainty bounds
+   - Implement MLE using `maximum_likelihood` from Turing.jl (see Lab 3); benchmark results against `Extremes.jl` for validation
+   - Implement Bayesian GEV inference using MCMC with `Turing.jl`; specify and justify physically-informed priors for location, scale, and shape parameters based on Houston climate knowledge (see Lab 4 for multiple approaches - pick and justify one)
+   - Compare posterior distributions to MLE results and ensure convergence (see Lab 4)
+   - Calculate and plot 50-year and 100-year return period estimates with posterior uncertainty bounds (see Lab 4)
 
 2. Multi-station Regional Analysis (ready after Lab 4)
-   - Repeat Task 1 for 4 additional Houston-area stations using identical methods
+   - Repeat Task 1 for 4 additional Houston-area stations using identical methods (pick one method from Task 1 - you don't need to do all three models)
    - Create summary table comparing 50-year return level estimates across stations
    - Plot time series of all 5 stations on same axes to visualize synchronous behavior
 
